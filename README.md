@@ -63,7 +63,6 @@ Since this extension is not currently on the Chrome Web Store, you can load it m
 ## Contributing
 
 Contributions, issues, and feature requests are welcome!  
-Feel free to check the [issues page](https://github.com/muhammedkayag/youtube-ambient-light/issues) if you want to report a bug or suggest an improvement.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/NewFeature`)
