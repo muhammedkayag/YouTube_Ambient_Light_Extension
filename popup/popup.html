@@ -1,0 +1,14 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+  body{font:14px system-ui;width:270px;padding:12px;background:#111;color:#eee}
+  label{display:flex;justify-content:space-between;align-items:center;margin:10px 0}
+  input[type=range]{width:120px}
+</style>
+<label>Enabled <input type="checkbox" id="enabled"></label>
+<label>Ambient glow <input type="checkbox" id="glow"></label>
+<label>Glow strength <input type="range" id="intensity" min="0.2" max="1" step="0.05"></label>
+<label>Glow blur (low = sharper) <input type="range" id="blur" min="2" max="50" step="1"></label>
+<label>Smoothness (left = silkier) <input type="range" id="smooth" min="0.08" max="1" step="0.02"></label>
+<label>Video size <input type="range" id="size" min="0.4" max="1" step="0.02"></label>
+<script src="popup.js"></script>
