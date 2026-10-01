@@ -1,0 +1,130 @@
+/* Everything below only applies on /watch pages (class added by content.js) */
+html.ayl-on, html.ayl-on body {
+  overflow: hidden !important;
+}
+
+/* Hide ALL the clutter */
+html.ayl-on ytd-masthead,
+html.ayl-on #masthead-container,
+html.ayl-on tp-yt-app-drawer,
+html.ayl-on #guide,
+html.ayl-on ytd-mini-guide-renderer,
+html.ayl-on #secondary,
+html.ayl-on #related,
+html.ayl-on #below,
+html.ayl-on #comments,
+html.ayl-on ytd-comments,
+html.ayl-on #chat,
+html.ayl-on ytd-live-chat-frame,
+html.ayl-on #panels,
+html.ayl-on ytd-merch-shelf-renderer,
+html.ayl-on #cinematics,
+html.ayl-on #cinematics-container,
+html.ayl-on ytd-cinematic-container-renderer,
+html.ayl-on #info,
+html.ayl-on #meta,
+html.ayl-on ytd-watch-metadata,
+html.ayl-on tp-yt-paper-tooltip,
+html.ayl-on ytd-popup-container,
+html.ayl-on ytd-engagement-panel-section-list-renderer,
+/* recommendations that pop up inside the player */
+html.ayl-on .ytp-endscreen-content,
+html.ayl-on .ytp-ce-element,
+html.ayl-on .ytp-videowall-still,
+html.ayl-on .ytp-pause-overlay,
+html.ayl-on .ytp-suggested-action,
+html.ayl-on .ytp-cards-teaser,
+html.ayl-on .ytp-paid-content-overlay {
+  display: none !important;
+}
+
+html.ayl-on #page-manager { margin: 0 !important; }
+
+/* Make sure nothing breaks position:fixed on the player */
+html.ayl-on ytd-app,
+html.ayl-on ytd-watch-flexy,
+html.ayl-on #columns,
+html.ayl-on #primary,
+html.ayl-on #primary-inner,
+html.ayl-on #player,
+html.ayl-on #player-container-outer,
+html.ayl-on #player-container-inner,
+html.ayl-on #player-container,
+html.ayl-on ytd-player,
+html.ayl-on #ytd-player,
+html.ayl-on ytd-player #container {
+  transform: none !important;
+  will-change: auto !important;
+  contain: none !important;
+  filter: none !important;
+  overflow: visible !important;
+}
+
+/* The player: dead center, both axes */
+html.ayl-on #movie_player {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: translate(-50%, -50%) !important;
+  width: var(--ayl-w, 80vw) !important;
+  height: var(--ayl-h, 45vw) !important;
+  margin: 0 !important;
+  z-index: 2000 !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.22) !important;
+}
+
+/* Ambient glow canvas: sits BEHIND the whole page, fades in smoothly */
+#ayl-glow {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1999;
+  pointer-events: none;
+  filter: blur(var(--ayl-blur, 18px)) saturate(1.7) brightness(1.1);
+  transform: scale(1.05) translateZ(0);
+  will-change: transform, opacity;
+  opacity: 0;
+  transition: opacity 1.4s ease;
+  display: none;
+}
+html.ayl-on.ayl-glow #ayl-glow { display: block; }
+html.ayl-on.ayl-glow.ayl-ready #ayl-glow { opacity: var(--ayl-opacity, 1); }
+
+/* Soft cinematic vignette over the glow (very edges only) */
+#ayl-vignette {
+  position: fixed;
+  inset: 0;
+  z-index: 1999;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 55%, rgba(0,0,0,0.5) 100%);
+  opacity: 0;
+  transition: opacity 1.4s ease;
+  display: none;
+}
+html.ayl-on.ayl-glow #ayl-vignette { display: block; }
+html.ayl-on.ayl-glow.ayl-ready #ayl-vignette { opacity: 1; }
+
+/* Let the glow show through YouTube's own opaque backgrounds */
+html.ayl-on { background: #000 !important; }
+html.ayl-on body,
+html.ayl-on ytd-app,
+html.ayl-on #content,
+html.ayl-on ytd-page-manager,
+html.ayl-on ytd-watch-flexy,
+html.ayl-on #columns,
+html.ayl-on #primary,
+html.ayl-on #primary-inner,
+html.ayl-on #player,
+html.ayl-on #player-container-outer,
+html.ayl-on #player-container-inner,
+html.ayl-on #player-container,
+html.ayl-on ytd-player,
+html.ayl-on #ytd-player,
+html.ayl-on ytd-player #container {
+  background: transparent !important;
+}

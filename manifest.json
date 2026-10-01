@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Ambient Light Center for YouTube",
+  "version": "1.0.0",
+  "description": "Ambient glow behind the YouTube video, with the video perfectly centered and everything else hidden.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "css": ["content.css"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": { "default_popup": "popup/popup.html", "default_title": "Ambient Light Center" }
+}
