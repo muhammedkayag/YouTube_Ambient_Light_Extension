@@ -1,3 +1,9 @@
+## Demo
+
+<video src="./demo.mp4" controls width="100%"></video>
+
+---
+
 # YouTube Ambient Light Extension
 
 A lightweight Chrome Extension designed to enhance the YouTube viewing experience by creating an immersive ambient lighting effect around the video player, similar to modern Smart TV lighting systems (e.g., Ambilight).
