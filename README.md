@@ -39,7 +39,7 @@ Since this extension is not currently on the Chrome Web Store, you can load it m
 
 1. **Clone or Download** this repository:
    ```bash
-   git clone https://github.com/muhammedkayag/youtube-ambient-light.git
+   git clone https://github.com/muhammedkayag/YouTube_Ambient_Light_Extension
    ```
 2. Open Google Chrome and navigate to `chrome://extensions/`.
 3. Enable **Developer mode** using the toggle switch in the top-right corner.
